@@ -28,11 +28,13 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: `https://mern-car-marketplace-two.vercel.app`,
+    origin:
+      process.env.NODE_ENV === 'production'
+        ? 'https://mern-car-marketplace-5rjd.vercel.app/' 
+        : 'http://localhost:5173',
     credentials: true,
   }),
 );
-
 
 const limiter = rateLimit({
   max: 100,
