@@ -28,10 +28,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin:
-      process.env.NODE_ENV === 'production'
-        ? 'https://mern-car-marketplace-5rjd.vercel.app/' 
-        : 'http://localhost:5173',
+    origin: 'https://mern-car-marketplace-5rjd.vercel.app',
     credentials: true,
   }),
 );
