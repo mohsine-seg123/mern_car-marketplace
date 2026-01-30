@@ -1,0 +1,327 @@
+[
+  {
+    "id": 1,
+    "title": "Tesla Cybertruck",
+    "category": "Tesla",
+    "price": "$79,990",
+    "rating": 4.8,
+    "reviewsCount": 124,
+    "availability": "In stock",
+    "description": "All-electric pickup with futuristic design.",
+    "properties": {
+      "motor": "Dual Motor AWD",
+      "range": "547 km",
+      "acceleration": "0–100 km/h in 4.1s",
+      "autonomy": "Electric",
+      "batteryCapacity": "123 kWh",
+      "fastCharge": "25 min"
+    },
+    "image": "Tesla1-removebg-preview_lxfewk",
+    "images": [
+      { "id": 1, "src": "Tesla1_pwqoiv" },
+      { "id": 2, "src": "Tesla3_rfbi9d" },
+      { "id": 3, "src": "Tesla2_u6wyvw" },
+      { "id": 4, "src": "Tesla_vplche" }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Toyota Land Cruiser Prado",
+    "category": "Toyota",
+    "price": "$48,000",
+    "rating": 4.8,
+    "reviewsCount": 142,
+    "availability": "Available",
+    "description": "SUV 4x4 robuste et confortable, idéal pour les longs trajets et le tout-terrain, réputé pour sa fiabilité.",
+    "properties": {
+      "motor": "2.8L Turbo Diesel / 2.7L Petrol (selon version)",
+      "range": "N/A",
+      "acceleration": "0–100 km/h in ~10.8s",
+      "autonomy": "Off-road 4WD systems (Multi-Terrain / Crawl Control)",
+      "batteryCapacity": "N/A",
+      "fastCharge": "N/A"
+    },
+    "image": "toyota1_v1-removebg-preview_mw1ipy",
+    "images": [
+      { "id": 1, "src": "toyota1_v4_r15wwt" },
+      { "id": 2, "src": "toyota1_v3_ibbrbh" },
+      { "id": 3, "src": "toyota1_v1_ru24c3" },
+      { "id": 4, "src": "toyota1_v2_hmhggq" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Tesla Robotaxi",
+    "category": "Tesla",
+    "price": "$35,000",
+    "rating": 4.7,
+    "reviewsCount": 124,
+    "availability": "Pre-order",
+    "description": "Autonomous electric vehicle designed for urban transportation and ride-hailing services.",
+    "properties": {
+      "motor": "Single Motor RWD",
+      "range": "400 km",
+      "acceleration": "0–100 km/h in 5.5s",
+      "autonomy": "Full Self-Driving",
+      "batteryCapacity": "75 kWh",
+      "fastCharge": "20 min"
+    },
+    "image": "Tesla-V1-1-removebg-preview_fzkvct",
+    "images": [
+      { "id": 1, "src": "Tesla-V1-1_ueb3uy" },
+      { "id": 2, "src": "Tesla-V1-3_xldni1" },
+      { "id": 3, "src": "Tesla-V1-2_gpiczd" },
+      { "id": 4, "src": "Tesla-V1_ktvao0" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Ferrari Roma",
+    "category": "ferrari",
+    "price": "$222,620",
+    "rating": 4.9,
+    "reviewsCount": 89,
+    "availability": "Limited availability",
+    "description": "Elegant grand touring sports car combining luxury, performance, and Italian design.",
+    "properties": {
+      "motor": "V8 Twin-Turbo",
+      "power": "620 hp",
+      "acceleration": "0–100 km/h in 3.4s",
+      "topSpeed": "320 km/h",
+      "capacity": "123 kWh",
+      "fastCharge": "25 min"
+    },
+    "image": "ferari-2-removebg-preview_fbz5e2",
+    "images": [
+      { "id": 1, "src": "ferari-4_zcv5vp" },
+      { "id": 2, "src": "ferari-2_o7orpj" },
+      { "id": 3, "src": "ferari-3_augnsk" },
+      { "id": 4, "src": "ferari-1_or4thf" }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Ferrari LaFerrari",
+    "category": "ferrari",
+    "price": "$1,420,000",
+    "rating": 5.0,
+    "reviewsCount": 52,
+    "availability": "Sold out",
+    "description": "Iconic Ferrari hypercar combining a naturally aspirated V12 engine with hybrid technology.",
+    "properties": {
+      "motor": "V12 Hybrid (HY-KERS)",
+      "power": "950 hp",
+      "acceleration": "0–100 km/h in 2.6s",
+      "topSpeed": "350+ km/h",
+      "capacity": "2.3 kWh",
+      "type": "Lithium-ion (HY-KERS)"
+    },
+    "image": "ferari-v1-2-removebg-preview_rl60ct",
+    "images": [
+      { "id": 1, "src": "ferari-v1-2_n5szbb" },
+      { "id": 2, "src": "ferari-v1-4_ghdvdx" },
+      { "id": 3, "src": "ferari-v1-1_iiqzpr" },
+      { "id": 4, "src": "ferari-v1-3_tbdmgi" }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "BMW i8 Roadster",
+    "category": "BMW",
+    "price": "$90,000",
+    "rating": 4.7,
+    "reviewsCount": 124,
+    "availability": "Used / Discontinued",
+    "description": "Plug-in hybrid sports roadster with futuristic design, scissor-style doors, and strong performance.",
+    "properties": {
+      "motor": "1.5L Turbo + Electric (Plug-in Hybrid AWD)",
+      "range": "≈ 500+ km (total)",
+      "acceleration": "0–100 km/h in ≈ 4.6s",
+      "autonomy": "Hybrid + Electric modes",
+      "batteryCapacity": "≈ 11.6 kWh",
+      "fastCharge": "≈ 3–4 h (AC charging)"
+    },
+    "image": "Cabriolets-BMV-V1-3-removebg-preview_tnrddn",
+    "images": [
+      { "id": 1, "src": "Cabriolets-BMV-V1-3_ott22u" },
+      { "id": 2, "src": "Cabriolets-BMV-V1-1_eytmsk" },
+      { "id": 3, "src": "Cabriolets-BMV-V1-4_weah9p" },
+      { "id": 4, "src": "Cabriolets-BMV-V1-2_jqrhy2" }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "BMW iX1",
+    "category": "BMW",
+    "price": "$55,000",
+    "rating": 4.6,
+    "reviewsCount": 98,
+    "availability": "Available",
+    "description": "Compact electric SUV with modern BMW design, premium interior, and efficient range.",
+    "properties": {
+      "motor": "Dual Motor AWD (xDrive)",
+      "range": "440 km",
+      "acceleration": "0–100 km/h in 5.6s",
+      "autonomy": "Driving Assistant (ADAS)",
+      "batteryCapacity": "64.7 kWh",
+      "fastCharge": "29 min (10–80%)"
+    },
+    "image": "BMV-3-removebg-preview_d4dksw",
+    "images": [
+      { "id": 1, "src": "BMV-4_lwpq8i" },
+      { "id": 2, "src": "BMV-3_srya67" },
+      { "id": 3, "src": "BMV-1_vfc0bg" },
+      { "id": 4, "src": "BMV-2_nyp1rg" }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Dacia Duster",
+    "category": "Dacia",
+    "price": "$18,900",
+    "rating": 4.5,
+    "reviewsCount": 156,
+    "availability": "Available",
+    "description": "SUV robuste et économique, idéal pour la ville et les routes difficiles.",
+    "properties": {
+      "motor": "1.5 dCi / 1.3 TCe (selon version)",
+      "power": "90–150 hp",
+      "acceleration": "0–100 km/h in ~10.5s",
+      "topSpeed": "~180 km/h",
+      "capacity": "50 L (fuel tank)",
+      "fastCharge": "N/A"
+    },
+    "image": "dacia_gris-removebg-preview_1_uasonu",
+    "images": [
+      { "id": 1, "src": "dacia_noir-removebg-preview_1_teplzd" },
+      { "id": 2, "src": "dacia_rouge-removebg-preview_wvk8cl" },
+      { "id": 3, "src": "blue_dacia-removebg-preview_p74t5p" },
+      { "id": 4, "src": "dacia_gris-removebg-preview_1_uasonu" }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Dacia Logan",
+    "category": "Dacia",
+    "price": "$14,500",
+    "rating": 4.4,
+    "reviewsCount": 210,
+    "availability": "Available",
+    "description": "Berline fiable et économique, idéale pour la ville et les trajets quotidiens.",
+    "properties": {
+      "motor": "1.0 TCe / 1.5 dCi (selon version)",
+      "range": "N/A",
+      "acceleration": "0–100 km/h in ~11.5s",
+      "autonomy": "Standard driving",
+      "batteryCapacity": "N/A",
+      "fastCharge": "N/A"
+    },
+    "image": "dacia4-removebg-preview_rvydex",
+    "images": [
+      { "id": 1, "src": "dacia4_w9o4ir" },
+      { "id": 2, "src": "dacia3_gbh4di" },
+      { "id": 3, "src": "dacia2_tcoks5" },
+      { "id": 4, "src": "dacia1_mzbnf0" }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Toyota RAV4",
+    "category": "Toyota",
+    "price": "$32,500",
+    "rating": 4.7,
+    "reviewsCount": 180,
+    "availability": "Available",
+    "description": "SUV spacieux et fiable, parfait pour la ville et les longs trajets.",
+    "properties": {
+      "motor": "2.5L Hybrid AWD (selon version)",
+      "range": "N/A",
+      "acceleration": "0–100 km/h in ~8.1s",
+      "autonomy": "Toyota Safety Sense (ADAS)",
+      "batteryCapacity": "N/A",
+      "fastCharge": "N/A"
+    },
+    "image": "toyota3-removebg-preview_y3giqz",
+    "images": [
+      { "id": 1, "src": "toyota1_rrkvio" },
+      { "id": 2, "src": "toyota4_socx9n" },
+      { "id": 3, "src": "toyota2_tdsprl" },
+      { "id": 4, "src": "toyota3_qu847p" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Tesla Model Y",
+    "category": "Tesla",
+    "price": "$59,990",
+    "rating": 4.7,
+    "reviewsCount": 210,
+    "availability": "In stock",
+    "description": "All-electric compact SUV with modern design and advanced autopilot features.",
+    "properties": {
+      "motor": "Dual Motor AWD",
+      "range": "533 km",
+      "acceleration": "0–100 km/h in 5.0s",
+      "autonomy": "Electric",
+      "capacity": "82 kWh",
+      "fastCharge": "22 min"
+    },
+    "image": "Tesla-v2-4-removebg-preview_xmorsm",
+    "images": [
+      { "id": 1, "src": "Tesla-v2-2_gtybpr" },
+      { "id": 2, "src": "Tesla-v2-4_q9jnok" },
+      { "id": 3, "src": "Tesla-v2-1_pvegps" },
+      { "id": 4, "src": "Tesla-v2-3_ek7kf6" }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Mercedes-Benz G-Class (G-Wagon)",
+    "category": "Mercedes",
+    "price": "$140,000",
+    "rating": 4.9,
+    "reviewsCount": 96,
+    "availability": "Limited availability",
+    "description": "SUV iconique et luxueux, très performant en tout-terrain.",
+    "properties": {
+      "motor": "V8 Biturbo / Inline-6 (selon version)",
+      "range": "N/A",
+      "acceleration": "0–100 km/h in ~4.5s",
+      "autonomy": "Advanced driver assistance (ADAS)",
+      "batteryCapacity": "N/A",
+      "fastCharge": "N/A"
+    },
+    "image": "mercedec3-removebg-preview_uhdglo",
+    "images": [
+      { "id": 1, "src": "mercedec3_xwdpcd" },
+      { "id": 2, "src": "mercedec1_h63www" },
+      { "id": 3, "src": "mercedec2_ppklms" },
+      { "id": 4, "src": "mercedec4_ngwrcn" }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Mercedes-Benz GLC",
+    "category": "Mercedes",
+    "price": "$58,000",
+    "rating": 4.7,
+    "reviewsCount": 132,
+    "availability": "Available",
+    "description": "SUV premium élégant et confortable, parfait pour la ville et les longs trajets.",
+    "properties": {
+      "motor": "2.0L Turbo (Mild Hybrid) / Diesel (selon version)",
+      "range": "N/A",
+      "acceleration": "0–100 km/h in ~6.2s",
+      "autonomy": "Mercedes-Benz Driver Assistance (ADAS)",
+      "batteryCapacity": "N/A",
+      "fastCharge": "N/A"
+    },
+    "image": "mercedec_v1-removebg-preview_orny6k",
+    "images": [
+      { "id": 1, "src": "mercedec_v3_cjlhyi" },
+      { "id": 2, "src": "mercedec_v2_xx9lhr" },
+      { "id": 3, "src": "mercedec_v4_sk5tsl" },
+      { "id": 4, "src": "mercedec_v1_tkcyvb" }
+    ]
+  }
+]
