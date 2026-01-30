@@ -10,7 +10,7 @@ import DetailleCar from "./Pages/DetailleCar";
 import ElectriqueCars from "./Pages/ElectriqueCars";
 import Contactseller from "./Pages/Contactseller";
 import Login from "./Pages/authentification/Login";
-import Register from "./Pages/authentification/register";
+import Register from "./Pages/authentification/Register";
 import { Toaster } from "react-hot-toast";
 
 
