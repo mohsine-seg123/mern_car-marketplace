@@ -6,7 +6,7 @@ import News from "../Components/Home/News";
 import Leaflet from "../Components/Home/Leaflet";
 import Famous_Cars from "../Components/Home/Famous_Cars";
 import About from "../Components/Home/About";
-import Footer from "../Components/layaut/footer";
+import Footer from "../Components/layaut/Footer";
 
 export default function Home() {
   const bottomRef = useRef(null);
