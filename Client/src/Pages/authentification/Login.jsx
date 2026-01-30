@@ -20,12 +20,15 @@ const Login = () => {
     });
   };
 
+
+  const apiUrl = import.meta.env.VITE_API_URL;
+ console.log('hello',apiUrl);
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/users/login`, {
+      const response = await fetch(`${apiUrl}/users/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include", // Permet d'envoyer/recevoir le cookie JWT
