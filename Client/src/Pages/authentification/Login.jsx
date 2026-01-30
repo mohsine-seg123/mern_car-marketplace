@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
+
 const Login = () => {
   const navigate = useNavigate();
 
@@ -24,13 +25,13 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3000/users/login", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/users/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include", // Permet d'envoyer/recevoir le cookie JWT
         body: JSON.stringify(formData),
       });
-
+     
       const data = await response.json();
 
       if (response.ok) {
