@@ -27,7 +27,7 @@
     "validator": "^13.15.26"
   },
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   },
   "devDependencies": {
     "nodemon": "^3.0.0"
