@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { cld } from "../../lib/cloudinary";
 import { AdvancedImage } from "@cloudinary/react";
 import { useNavigate } from "react-router-dom";
-import { cld } from "../../lib/cloudinary";
 
 
 export default function Hero({ bottomRef }) {
