@@ -150,7 +150,7 @@ export default function Navbare() {
       <div
         ref={menuRef}
         className={`lg:hidden fixed top-[62px] right-0 
-        h-[calc(100vh-62px)]
+        h-[500px]
         w-1/2 min-w-[240px] max-w-[360px]
         bg-surface border-l border-border-custom shadow-xl z-[1001]
         transition-transform duration-300 ease-out
