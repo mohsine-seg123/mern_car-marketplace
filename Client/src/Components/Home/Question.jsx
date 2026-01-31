@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { cld } from "../../lib/cloudinary";
+import { AdvancedImage } from "@cloudinary/react";
 
 export default function Question() {
+  const image1 = cld.image("down-arrow_cqadlj");
   const faqData = [
     {
       id: 1,
@@ -50,14 +53,12 @@ export default function Question() {
               <span className="font-bold text-text text-lg">
                 {item.question}
               </span>
-
-              <img
-                src="/src/assets/down-arrow.png"
-                alt="toggle"
-                className={`w-5 h-5 transition-transform duration-300 ${
+              <AdvancedImage
+                  cldImg={image1}
+                   className={`w-5 h-5 transition-transform duration-300 ${
                   openId === item.id ? "rotate-180" : "rotate-0"
                 }`}
-              />
+                />
             </button>
 
             <div
