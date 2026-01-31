@@ -3,9 +3,12 @@ import gsap from "gsap";
 import { cld } from "../../lib/cloudinary";
 import { AdvancedImage } from "@cloudinary/react";
 import { useNavigate } from "react-router-dom";
+import { cld } from "../../lib/cloudinary";
 
 
 export default function Hero({ bottomRef }) {
+   const image1 = cld.image("left-arrow_x1isev");
+   const image2 = cld.image("right-arrow_aa4mil");
   const Navigate = useNavigate();
   const root = useRef(null);
   const vedeoref = useRef(null);
@@ -149,14 +152,18 @@ export default function Hero({ bottomRef }) {
             onClick={changerImage}
             className="absolute top-1/2 transition-all duration-200 group-hover:opacity-100 opacity-0 left-10 h-10 w-10 hover:cursor-pointer"
           >
-            <img src="./src/assets/left-arrow.png" alt="left arrow" />
+             <AdvancedImage
+            cldImg={image1}
+          />
           </div>
 
           <div
             onClick={changerImage}
             className="absolute top-1/2 transition-all duration-200 group-hover:opacity-100 opacity-0  h-10 w-10 right-10 hover:cursor-pointer"
           >
-            <img src="./src/assets/right-arrow.png" alt="left arrow" />
+             <AdvancedImage
+            cldImg={image2}
+          />
           </div>
 
           <div className="flex flex-row absolute bottom-0 gap-4 mt-2">
