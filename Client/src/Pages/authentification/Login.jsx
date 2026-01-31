@@ -28,7 +28,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(`${apiUrl}/users/login`, {
+      const response = await fetch(`${apiUrl}users/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include", // Permet d'envoyer/recevoir le cookie JWT
