@@ -94,7 +94,7 @@ export default function Navbare() {
                 />
         </NavLink>
 
-        <div className="hidden lg:flex items-center gap-14 bg-gray-50/50 px-6 py-3 rounded-full border border-border-custom">
+        <div className="hidden lg:flex items-center gap-8 bg-gray-50/50 px-6 py-3 rounded-full border border-border-custom">
           {navLinks.map((link) => (
             <button
               key={link.to}
