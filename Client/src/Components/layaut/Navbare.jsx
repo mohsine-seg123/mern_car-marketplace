@@ -2,9 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import { UseCars } from "../../Context/ContextProvider";
-
+import { AdvancedImage } from "@cloudinary/react";
+import { cld } from "../../lib/cloudinary";
 
 export default function Navbare() {
+  const image1 = cld.image("image-removebg_qyrdmh");
   const root = useRef(null);
   const menuRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -86,11 +88,10 @@ export default function Navbare() {
           onClick={closeMenu}
           className="tracking-tighter flex items-center"
         >
-          <img
-             src="/Images/image-removebg.png"  
-            alt="Logo"
-            className="w-[150px] h-[70px]"
-          />
+           <AdvancedImage
+                  cldImg={image1}
+                   className="w-[150px] h-[70px]"
+                />
         </NavLink>
 
         <div className="hidden lg:flex items-center gap-14 bg-gray-50/50 px-6 py-3 rounded-full border border-border-custom">
