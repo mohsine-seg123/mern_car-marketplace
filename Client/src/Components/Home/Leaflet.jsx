@@ -1,14 +1,21 @@
-import { useState } from "react"; // 1. Ajout de useState
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet"; // 2. Ajout de useMap
+import { useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
+// ✅ FIX pour les icônes Leaflet
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+});
 
 function ChangeView({ center, zoom }) {
   const map = useMap();
-  map.flyTo(center, zoom, { duration: 1.5 }); 
+  map.flyTo(center, zoom, { duration: 1.5 });
   return null;
 }
-
 
 export default function GarageMap() {
   const garagesData = [
@@ -50,14 +57,13 @@ export default function GarageMap() {
     },
   ];
 
- 
   const [view, setView] = useState({
-    center: [31.7917, -7.0926], 
+    center: [31.7917, -7.0926],
     zoom: 6,
   });
 
   return (
-    <section className=" px-6 py-4 lg:py-8 lg:px-12 gap-5 w-full flex flex-col">
+    <section className="px-6 py-4 lg:py-8 lg:px-12 gap-5 w-full flex flex-col">
       <h2 className="text-3xl sm:mb-4 mb-2 ml-2 font-extrabold text-text">
         Our Garage
       </h2>
@@ -88,7 +94,6 @@ export default function GarageMap() {
             </div>
           ))}
         </div>
-
         <div className="border-2 rounded-lg w-full sm:w-1/2 border-blue-400 overflow-hidden">
           <MapContainer
             center={view.center}
@@ -99,9 +104,7 @@ export default function GarageMap() {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution="&copy; OpenStreetMap contributors"
             />
-
             <ChangeView center={view.center} zoom={view.zoom} />
-
             {garagesData.map((garage) => (
               <Marker key={garage.id} position={garage.position}>
                 <Popup>
