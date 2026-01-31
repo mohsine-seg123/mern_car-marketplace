@@ -14,13 +14,18 @@
   --primary-soft: #dcebff;
 }
 
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body {
+html, body {
   overflow-x: hidden;
   margin: 0;
+  padding: 0;
+  width: 100%;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
 }
