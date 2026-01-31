@@ -21,12 +21,15 @@ const Register = () => {
     });
   };
 
+  const apiUrl = import.meta.env.VITE_API_URL;
+  console.log('hello',`${apiUrl}users/signup`);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/users/signup`, {
+      const response = await fetch(`${apiUrl}users/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
