@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import { UseCars } from "../../Context/ContextProvider";
+import logo from '../assets/image-removebg.png';
+
 
 export default function Navbare() {
   const root = useRef(null);
@@ -86,7 +88,7 @@ export default function Navbare() {
           className="tracking-tighter flex items-center"
         >
           <img
-            src="/src/assets/image-removebg.png"
+            src={logo}
             alt="Logo"
             className="w-[150px] h-[70px]"
           />
