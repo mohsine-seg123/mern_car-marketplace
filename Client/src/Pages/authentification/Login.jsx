@@ -22,7 +22,7 @@ const Login = ({setConnecter,setuser}) => {
 
 
   const apiUrl = import.meta.env.VITE_API_URL;
- console.log('hello',apiUrl);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
