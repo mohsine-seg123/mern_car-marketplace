@@ -64,3 +64,29 @@ exports.login=catchAsync(async(req,res,next)=>{
 });
 
 
+
+exports.protect = catchAsync(async (req, res, next) => {
+  const token = req.cookies?.jwt;
+
+  if (!token) return next(new AppError('you are not login', 401));
+
+  const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+  const currentUser = await User.findById(decoded.id);
+  if (!currentUser) return next(new AppError('User not found', 401));
+
+  req.user = currentUser;
+  next();
+});
+
+
+exports.me=catchAsync(async(req,res,next)=>{
+   const user=req.user;
+   console.log(user);
+   res.status(200).json({
+    status:'success',
+    data:{
+        user,
+    }
+   });
+});
