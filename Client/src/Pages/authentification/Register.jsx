@@ -22,7 +22,6 @@ const Register = ({setConnecter,setuser}) => {
   };
 
   const apiUrl = import.meta.env.VITE_API_URL;
-  console.log('hello',`${apiUrl}users/signup`);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
