@@ -12,12 +12,27 @@ import Contactseller from "./Pages/Contactseller";
 import Login from "./Pages/authentification/Login";
 import Register from "./Pages/authentification/Register";
 import { Toaster } from "react-hot-toast";
-import { useState } from "react";
+import {useEffect, useState } from "react";
 
 
 export default function App() {
-  const [connecter,setConnecter] = useState(false);
-  const [user,setuser]=useState("");
+  const [connecter, setConnecter] = useState(false);
+  const [user, setuser] = useState("");
+
+  useEffect(()=>{
+     (async ()=>{
+      try{
+            const res=await api.get('/users/me');
+             setConnecter(true);
+            setuser(res.data.data.user.name);
+      }  catch(err){
+        setConnecter(false);
+        setuser(null);
+      }   
+     })()
+  },[]);
+
+  
   return (
     <BrowserRouter>
       <Toaster />
