@@ -25,7 +25,6 @@ export default function App() {
         <Route path="/" element={<Layaut connecter={connecter} username={user} />}>
           <Route index element={<Home />} />
           <Route path="Reviews_cars/:_id" element={<DetailleNews />} />
-          <Route path="*" element={<ErreurPage />} />
           <Route path="electric" element={<ElectriqueCars />} />
           <Route path="newsCars" element={<NewsCars />} />
           <Route path="newsCars/:id" element={<DetailleCar />} />
@@ -34,6 +33,7 @@ export default function App() {
           <Route path="login" element={<Login setConnecter={setConnecter} setuser={setuser} />} />
           <Route path="register" element={<Register setConnecter={setConnecter} setuser={setuser} />} />
         </Route>
+           <Route path="*" element={<ErreurPage />} />
       </Routes>
     </BrowserRouter>
   );
