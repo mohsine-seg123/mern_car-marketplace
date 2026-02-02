@@ -13,6 +13,7 @@ import Login from "./Pages/authentification/Login";
 import Register from "./Pages/authentification/Register";
 import { Toaster } from "react-hot-toast";
 import {useEffect, useState } from "react";
+import api from "./api/axios";
 
 
 export default function App() {
