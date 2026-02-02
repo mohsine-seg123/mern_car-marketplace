@@ -5,15 +5,13 @@ import { UseCars } from "../../Context/ContextProvider";
 import { AdvancedImage } from "@cloudinary/react";
 import { cld } from "../../lib/cloudinary";
 
-export default function Navbare() {
+export default function Navbare({connecter,username}) {
   const image1 = cld.image("image-removebg_qyrdmh");
   const root = useRef(null);
   const menuRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const { bottomRef2 } = UseCars();
   const navigate = useNavigate();
-
-  const [connecter] = useState(false);
 
   // Animation GSAP
   useEffect(() => {
@@ -107,12 +105,19 @@ export default function Navbare() {
         </div>
 
         <div className="flex items-center gap-3">
-          <NavLink
-            to="/login"
-            className="hidden md:block bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-xl font-bold shadow-md shadow-primary/20 transition active:scale-95"
-          >
-            Sign in
-          </NavLink>
+          {!connecter ? (
+            <NavLink
+              to="/login"
+              className="text-primary text-xl border border-primary rounded-xl px-4 py-1 font-medium hover:underline underline-offset-4"
+            >
+              login
+            </NavLink>
+          ) : (
+            <div className="text-right">
+              <p className="text-xs text-text">Welcome back</p>
+              <p className="text-xl font-medium text-primary">{username}</p>
+            </div>
+          )}
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -179,22 +184,19 @@ export default function Navbare() {
           <div className="mt-auto">
             <hr className="border-border-custom mb-4" />
 
-            {!connecter ? (
-              <NavLink
-                to="/login"
-                onClick={closeMenu}
-                className="block text-center bg-primary hover:bg-primary-hover text-white py-3 rounded-2xl font-bold"
-              >
-                Sign in
-              </NavLink>
-            ) : (
-              <div className="rounded-2xl border border-border-custom bg-surface-hover p-4">
-                <p className="text-xs uppercase tracking-widest text-text-muted font-bold">
-                  Welcome
-                </p>
-                <p className="text-sm font-bold text-primary">User</p>
-              </div>
-            )}
+           {!connecter ? (
+            <NavLink
+              to="/login"
+              className="text-primary text-xl border border-primary rounded-xl px-4 py-1 font-medium hover:underline underline-offset-4"
+            >
+              login
+            </NavLink>
+          ) : (
+            <div className="text-right">
+              <p className="text-xs text-text">Welcome back</p>
+              <p className="text-xl font-medium text-primary">{username}</p>
+            </div>
+          )}
           </div>
         </div>
       </div>
