@@ -43,9 +43,6 @@ export default function Footer() {
           {/* Section 1: Brand & Bio */}
           <div className="col-span-1 lg:col-span-1">
             <h3 className="text-xl font-black text-white tracking-tighter flex items-center gap-2">
-              <span className="bg-blue-600 p-1 rounded text-white text-sm">
-                🚗
-              </span>
               NeoDrive
             </h3>
             <p className="mt-4 text-sm leading-6 text-gray-400">
