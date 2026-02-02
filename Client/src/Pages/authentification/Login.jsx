@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 
-const Login = () => {
+const Login = ({setConnecter,setuser}) => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -39,6 +39,8 @@ const Login = () => {
 
       if (response.ok) {
         // Succès : Utilisation du message du backend ou message générique
+         setuser(data.data.user.name);
+         setConnecter(true);
         toast.success("Successfully logged in !", {
           duration: 2000,
           position: "top-center",
