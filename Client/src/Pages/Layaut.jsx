@@ -3,11 +3,11 @@ import Navbare from "../Components/layaut/Navbare";
 
 
 
-export default function Layaut(){
+export default function Layaut({connecter,username}) {
 
     return (
       <>
-         <Navbare />
+         <Navbare connecter={connecter} username={username} />
          <Outlet />
       </>
     );
