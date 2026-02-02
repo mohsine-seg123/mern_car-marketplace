@@ -12,14 +12,18 @@ import Contactseller from "./Pages/Contactseller";
 import Login from "./Pages/authentification/Login";
 import Register from "./Pages/authentification/Register";
 import { Toaster } from "react-hot-toast";
+import { useState } from "react";
 
 
 export default function App() {
+  const [connecter,setConnecter] = useState(false);
+  const [user,setuser]=useState("");
   return (
     <BrowserRouter>
       <Toaster />
       <Routes>
-        <Route path="/" element={<Layaut />}>
+        <Routes>
+        <Route path="/" element={<Layaut connecter={connecter} username={user} />}>
           <Route index element={<Home />} />
           <Route path="Reviews_cars/:_id" element={<DetailleNews />} />
           <Route path="*" element={<ErreurPage />} />
@@ -28,8 +32,8 @@ export default function App() {
           <Route path="newsCars/:id" element={<DetailleCar />} />
           <Route path="dacia" element={<Dacia />} />
           <Route path="Contactseller/:id" element={<Contactseller />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login setConnecter={setConnecter} setuser={setuser} />} />
+          <Route path="register" element={<Register setConnecter={setConnecter} setuser={setuser} />} />
         </Route>
       </Routes>
     </BrowserRouter>
