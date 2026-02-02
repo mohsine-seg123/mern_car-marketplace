@@ -21,7 +21,6 @@ export default function App() {
   return (
     <BrowserRouter>
       <Toaster />
-      <Routes>
         <Routes>
         <Route path="/" element={<Layaut connecter={connecter} username={user} />}>
           <Route index element={<Home />} />
