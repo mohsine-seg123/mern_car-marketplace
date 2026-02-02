@@ -23,6 +23,7 @@ export default function App() {
      (async ()=>{
       try{
             const res=await api.get('/users/me');
+            console.log(res);
              setConnecter(true);
             setuser(res.data.data.user.name);
       }  catch(err){
