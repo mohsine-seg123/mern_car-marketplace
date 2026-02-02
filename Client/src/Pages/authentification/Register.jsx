@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
-const Register = () => {
+const Register = ({setConnecter,setuser}) => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -39,6 +39,8 @@ const Register = () => {
       const data = await response.json();
 
       if (response.ok) {
+        setuser(data.data.user.name);
+        setConnecter(true);
         toast.success("Successfully created !", {
           duration: 1500,
           position: "top-left",
