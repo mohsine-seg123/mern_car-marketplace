@@ -1,14 +1,33 @@
 import { AdvancedImage } from "@cloudinary/react";
 import { useNavigate, useParams } from "react-router-dom";
 import { cld } from "../../lib/cloudinary";
+import api from "../../api/axios";
+import toast from "react-hot-toast";
 
 export default function CarDetailleHeader({ car }) {
   const Navigate=useNavigate();
   const {id}=useParams();
 
-  function goContactseller(id){
-    window.scrollTo(0,0);
-     Navigate(`/Contactseller/${id}`);
+  async  function goContactseller(id){
+     try{
+        const res=await api.get('/users/me');
+          window.scrollTo(0,0);
+         Navigate(`/Contactseller/${id}`);
+     }catch(err){
+         window.scrollTo(0, 0);
+            toast.error("Please log in to contact the seller!", {
+              duration: 2000,
+              position: "top-center",
+              style: {
+                border: "1px solid #10B981",
+                padding: "16px",
+                color: "#065F46",
+                borderRadius: "10px",
+                background: "#ECFDF5",
+              },
+            });
+         Navigate(`/login`);
+     }
   };
 
 
