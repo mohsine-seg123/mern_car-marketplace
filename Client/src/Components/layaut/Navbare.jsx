@@ -6,7 +6,7 @@ import { AdvancedImage } from "@cloudinary/react";
 import { cld } from "../../lib/cloudinary";
 import api from "../../api/axios";
 
-export default function Navbare({connecter,username}) {
+export default function Navbare({connecter,username,setConnecter,setuser}) {
   const root = useRef(null);
   const menuRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -74,14 +74,21 @@ export default function Navbare({connecter,username}) {
     closeMenu();
   };
 
-  const handleLogout = () => {
-        api.get('users/logout').then(()=>{
-          navigate('/');
-          window.location.reload();
-        }).catch((err)=>{
-          console.error("Logout failed:", err);
-        });
-  };
+ const handleLogout = async () => {
+   try {
+     await api.post("/users/logout"); 
+
+     setConnecter(false);
+     setuser(""); 
+     navigate("/");
+
+     // optionnel
+     window.location.reload();
+   } catch (err) {
+     console.error("Logout failed:", err);
+   }
+ };
+
 
 
   return (
@@ -249,5 +256,7 @@ export default function Navbare({connecter,username}) {
     </header>
   );
 }
+
+
 
 
