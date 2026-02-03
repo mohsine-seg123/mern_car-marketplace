@@ -4,9 +4,9 @@ import gsap from "gsap";
 import { UseCars } from "../../Context/ContextProvider";
 import { AdvancedImage } from "@cloudinary/react";
 import { cld } from "../../lib/cloudinary";
+import api from "../../api/axios";
 
 export default function Navbare({connecter,username}) {
-  const image1 = cld.image("image-removebg_qyrdmh");
   const root = useRef(null);
   const menuRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -74,6 +74,16 @@ export default function Navbare({connecter,username}) {
     closeMenu();
   };
 
+  const handleLogout = () => {
+        api.get('users/logout').then(()=>{
+          navigate('/');
+          window.location.reload();
+        }).catch((err)=>{
+          console.error("Logout failed:", err);
+        });
+  };
+
+
   return (
     <header
       ref={root}
@@ -86,13 +96,13 @@ export default function Navbare({connecter,username}) {
           onClick={closeMenu}
           className="tracking-tighter flex items-center"
         >
-           <AdvancedImage
-                  cldImg={image1}
-                   className="w-[150px] h-[70px]"
-                />
+          <AdvancedImage
+            cldImg={cld.image("image-removebg_qyrdmh")}
+            className="w-[150px] h-[70px]"
+          />
         </NavLink>
 
-        <div className="hidden lg:flex items-center gap-8 bg-gray-50/50 px-6 py-3 rounded-full border border-border-custom">
+        <div className="hidden lg:flex items-center gap-14 bg-gray-50/50 px-6 py-3 rounded-full border border-border-custom">
           {navLinks.map((link) => (
             <button
               key={link.to}
@@ -113,9 +123,37 @@ export default function Navbare({connecter,username}) {
               login
             </NavLink>
           ) : (
-            <div className="text-right">
-              <p className="text-xs text-text">Welcome back</p>
-              <p className="text-xl font-medium text-primary">{username}</p>
+            <div className="relative group ml-auto">
+              <AdvancedImage
+                cldImg={cld.image("user_q1hjq5")}
+                className="w-[30px] h-[30px] object-cover rounded-full cursor-pointer"
+              />
+
+              <div
+                className="
+      absolute -right-2 top-full mt-2 w-[180px]
+      opacity-0 invisible translate-y-2
+      group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+      transition-all duration-200
+      rounded-2xl border border-border-custom bg-white shadow-lg p-3
+      z-50
+    "
+              >
+                <p className="text-text-muted text-sm">
+                  Hello, <span className="font-bold">{username}</span>
+                </p>
+
+                <button
+                  onClick={handleLogout}
+                  className="mt-2 w-full flex items-center gap-4 text-text-muted hover:text-primary hover:underline"
+                >
+                  <span>Log out</span>
+                  <AdvancedImage
+                    cldImg={cld.image("right-arrow_2_okh41o")}
+                    className="w-[18px] h-[18px] object-cover"
+                  />
+                </button>
+              </div>
             </div>
           )}
 
@@ -161,7 +199,7 @@ export default function Navbare({connecter,username}) {
         transition-transform duration-300 ease-out
         ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        <div className="flex flex-col p-6 gap-6 h-full">
+        <div className="flex flex-col p-6 gap-4 h-full">
           {/* Header */}
           <div className="flex items-center justify-between">
             <p className="text-sm font-semibold text-text">Menu</p>
@@ -181,25 +219,35 @@ export default function Navbare({connecter,username}) {
           </div>
 
           {/* Bottom */}
-          <div className="mt-auto">
+          <div className="mt-12">
             <hr className="border-border-custom mb-4" />
 
-           {!connecter ? (
-            <NavLink
-              to="/login"
-              className="text-primary text-xl border border-primary rounded-xl px-4 py-1 font-medium hover:underline underline-offset-4"
-            >
-              login
-            </NavLink>
-          ) : (
-            <div className="text-right">
-              <p className="text-xs text-text">Welcome back</p>
-              <p className="text-xl font-medium text-primary">{username}</p>
-            </div>
-          )}
+            {!connecter ? (
+              <NavLink
+                to="/login"
+                className="text-primary text-xl border border-primary rounded-xl px-4 py-1 font-medium hover:underline underline-offset-4"
+              >
+                login
+              </NavLink>
+            ) : (
+              <div className="text-left space-y-1 flex gap-4 hover:gap-6  items-center">
+                <p
+                  onClick={handleLogout}
+                  className=" text-text-muted text-xl hover:underline hover:text-primary cursor-pointer"
+                >
+                  log out
+                </p>
+                <AdvancedImage
+                  cldImg={cld.image("right-arrow_2_okh41o")}
+                  className="w-[20px] h-[20px] object-cover"
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
     </header>
   );
 }
+
+
