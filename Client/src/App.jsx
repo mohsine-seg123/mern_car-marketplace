@@ -39,7 +39,7 @@ export default function App() {
     <BrowserRouter>
       <Toaster />
         <Routes>
-        <Route path="/" element={<Layaut connecter={connecter} username={user} />}>
+        <Route path="/" element={<Layaut connecter={connecter} username={user} setconnecter={setConnecter} setuser={setuser} />}>
           <Route index element={<Home />} />
           <Route path="Reviews_cars/:_id" element={<DetailleNews />} />
           <Route path="electric" element={<ElectriqueCars />} />
