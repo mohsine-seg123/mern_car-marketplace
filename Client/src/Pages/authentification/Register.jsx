@@ -28,7 +28,11 @@ const Register = ({setConnecter,setuser}) => {
     setLoading(true);
 
     try {
+<<<<<<< HEAD
       const response = await fetch(`${apiUrl}users/signup`, {
+=======
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/users/signup`, {
+>>>>>>> 6f3f9fe (after add dashbord)
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -36,7 +40,6 @@ const Register = ({setConnecter,setuser}) => {
       });
 
       const data = await response.json();
-
       if (response.ok) {
         setuser(data.data.user.name);
         setConnecter(true);

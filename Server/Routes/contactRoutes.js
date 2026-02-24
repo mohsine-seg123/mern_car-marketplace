@@ -1,16 +1,11 @@
 const express = require('express');
 const contactController = require('../Controllers/contactController');
-
+const authController = require('../Controllers/authController');
 const router = express.Router();
 
-router
-  .route('/')
-  .get(contactController.getAllContacts)
-  .post(contactController.createContact);
 
-router
-  .route('/:id')
-  .get(contactController.getContact)
-  .delete(contactController.deleteContact);
+router.post('/contact', contactController.createContact);
+router.get('/getAllMessage',  contactController.getAllContacts);
+router.delete('/deleteContact/:id', authController.restrictTo('admin'), contactController.deleteContact);
 
 module.exports = router;

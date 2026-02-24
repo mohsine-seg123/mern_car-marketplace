@@ -5,7 +5,11 @@ const api = axios.create({
   headers: {
     "Content-Type": "application/json",
   },
+<<<<<<< HEAD
    withCredentials: true,
+=======
+  withCredentials: true,
+>>>>>>> 6f3f9fe (after add dashbord)
   timeout: 10000,
 });
 

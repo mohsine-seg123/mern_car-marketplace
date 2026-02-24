@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 const Login = ({setConnecter,setuser}) => {
   const navigate = useNavigate();
-
+  
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -38,9 +38,8 @@ const Login = ({setConnecter,setuser}) => {
       const data = await response.json();
 
       if (response.ok) {
-        // Succès : Utilisation du message du backend ou message générique
-         setuser(data.data.user.name);
-         setConnecter(true);
+        setuser(data.data.user.name);
+        setConnecter(true);
         toast.success("Successfully logged in !", {
           duration: 2000,
           position: "top-center",

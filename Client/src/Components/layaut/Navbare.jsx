@@ -257,6 +257,9 @@ export default function Navbare({connecter,username,setConnecter,setuser}) {
   );
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 6f3f9fe (after add dashbord)

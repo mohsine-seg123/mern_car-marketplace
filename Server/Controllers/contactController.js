@@ -47,8 +47,13 @@ exports.getContact = catchAsync(async (req, res) => {
   });
 });
 
+
 exports.deleteContact = catchAsync(async (req, res) => {
-  await Contact.findByIdAndDelete(req.params.id);
+  const contact = await Contact.findById(req.params.id);
+  if(!contact)
+    return next(new AppError('Contact not found', 404));
+
+  await Contact.deleteOne({ _id: req.params.id });
 
   res.status(204).json({
     status: 'success',
