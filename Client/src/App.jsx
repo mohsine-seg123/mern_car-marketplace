@@ -12,14 +12,8 @@ import Contactseller from "./Pages/Contactseller";
 import Login from "./Pages/authentification/Login";
 import Register from "./Pages/authentification/Register";
 import { Toaster } from "react-hot-toast";
-<<<<<<< HEAD
 import {useEffect, useState } from "react";
 import api from "./api/axios";
-
-=======
-import { useEffect, useState } from "react";
-import api from "./api/axios";
->>>>>>> 6f3f9fe (after add dashbord)
 
 export default function App() {
   const [connecter, setConnecter] = useState(false);
@@ -29,10 +23,6 @@ export default function App() {
      (async ()=>{
       try{
             const res=await api.get('/users/me');
-<<<<<<< HEAD
-            console.log(res);
-=======
->>>>>>> 6f3f9fe (after add dashbord)
              setConnecter(true);
             setuser(res.data.data.user.name);
       }  catch(err){
@@ -42,19 +32,13 @@ export default function App() {
      })()
   },[]);
 
-<<<<<<< HEAD
   
-  return (
-    <BrowserRouter>
-      <Toaster />
-        <Routes>
-=======
+
 
   return (
     <BrowserRouter>
       <Toaster />
       <Routes>
->>>>>>> 6f3f9fe (after add dashbord)
         <Route path="/" element={<Layaut connecter={connecter} username={user} setconnecter={setConnecter} setuser={setuser} />}>
           <Route index element={<Home />} />
           <Route path="Reviews_cars/:_id" element={<DetailleNews />} />

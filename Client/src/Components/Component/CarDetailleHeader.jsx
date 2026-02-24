@@ -3,21 +3,13 @@ import { useNavigate, useParams } from "react-router-dom";
 import { cld } from "../../lib/cloudinary";
 import api from "../../api/axios";
 import toast from "react-hot-toast";
-<<<<<<< HEAD
-=======
 
->>>>>>> 6f3f9fe (after add dashbord)
 
 export default function CarDetailleHeader({ car }) {
   const Navigate=useNavigate();
   const {id}=useParams();
 
-<<<<<<< HEAD
-  async  function goContactseller(id){
-=======
-  
 async  function goContactseller(id){
->>>>>>> 6f3f9fe (after add dashbord)
      try{
         const res=await api.get('/users/me');
           window.scrollTo(0,0);
