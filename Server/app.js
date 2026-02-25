@@ -45,10 +45,10 @@ app.use('/api', limiter);
 
 app.use(morgan('dev'));
 
-app.use('/latests', latestRouter);
-app.use('/users', userRoutes);
-app.use('/cars',carRoutes);
-app.use('/contacts',contactRoutes);
+app.use('/api/latests', latestRouter);
+app.use('/api/users', userRoutes);
+app.use('/api/cars', carRoutes);
+app.use('/api/contacts', contactRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'API is running' });
