@@ -28,7 +28,7 @@ const Register = ({setConnecter,setuser}) => {
     setLoading(true);
 
     try {
-      const response = await fetch(`${apiUrl}users/signup`, {
+      const response = await fetch(`${apiUrl}/api/users/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
