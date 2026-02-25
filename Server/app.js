@@ -28,7 +28,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: ['http://localhost:5173','https://dashbord-neo-drive.vercel.app/','http://localhost:5174','https://mern-car-marketplace-5rjd.vercel.app'],
+    origin: ['http://localhost:5173','https://dashbord-neo-drive.vercel.app','http://localhost:5174','https://mern-car-marketplace-5rjd.vercel.app'],
     credentials: true,
   }),
 );
