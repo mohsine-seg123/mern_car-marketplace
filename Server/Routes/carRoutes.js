@@ -1,7 +1,7 @@
 
 const express = require('express');
 const router = express.Router();
-const carController = require('../controllers/carController');
+const carController = require('../Controllers/carController');
 
 router.get('/stats', carController.getCarStats);
 
