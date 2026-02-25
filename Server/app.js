@@ -50,6 +50,10 @@ app.use('/users', userRoutes);
 app.use('/cars',carRoutes);
 app.use('/contacts',contactRoutes);
 
+app.get('/', (req, res) => {
+  res.status(200).json({ status: 'ok', message: 'API is running' });
+});
+
 app.all(/.*/, (req, res, next) => {
   next(new AppError(`can't find ${req.originalUrl} on this server`, 404));
 });
