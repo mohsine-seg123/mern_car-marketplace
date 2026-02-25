@@ -50,7 +50,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/cars', carRoutes);
 app.use('/api/contacts', contactRoutes);
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'API is running' });
 });
 
