@@ -1,17 +1,10 @@
 {
   "version": 2,
-  "crons": [
-    {
-      "path": "/api/cron/ping",
-      "schedule": "* * * * *"
+  "functions": {
+    "server.js": {
+      "runtime": "nodejs20.x"
     }
-  ],
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    }
-  ],
+  },
   "routes": [
     {
       "src": "/(.*)",
