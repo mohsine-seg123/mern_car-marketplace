@@ -42,22 +42,6 @@ const limiter = rateLimit({
 
 app.use('/api', limiter);
 
-// ...existing code...
-app.get("/api/cron/ping", async (req, res) => {
-  const auth = req.headers.authorization || "";
-  const token = auth.startsWith("Bearer ") ? auth.slice(7) : "";
-
-  if (!process.env.CRON_SECRET || token !== process.env.CRON_SECRET) {
-    return res.status(401).json({ ok: false, message: "Unauthorized" });
-  }
-
-  try {
-    return res.status(200).json({ ok: true, ranAt: new Date().toISOString() });
-  } catch (e) {
-    return res.status(500).json({ ok: false, error: e.message });
-  }
-});
-// ...existing code...
 
 app.use(morgan('dev'));
 
